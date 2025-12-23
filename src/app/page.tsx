@@ -7,15 +7,22 @@ import Footer from '@/components/Footer';
 
 export default function Home() {
   return (
-    <main className="bg-slate-950 text-white min-h-screen selection:bg-cyan-500/30">
-      <Navbar />
-      <div className="max-w-7xl mx-auto px-6 md:px-12">
-        <Hero />
+    <main className="bg-slate-950 text-white min-h-screen">
+    <Navbar />
+    
+    {/* Container to keep content centered and padded */}
+    <div className="max-w-6xl mx-auto px-6 sm:px-12 lg:px-20">
+      <Hero />
+      
+      {/* Section wrappers for spacing */}
+      <div className="space-y-32"> 
         <About />
         <Projects />
         <Contact />
       </div>
-      <Footer />
-    </main>
+    </div>
+
+    <Footer />
+  </main>
   );
 }
