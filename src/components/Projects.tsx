@@ -17,7 +17,7 @@ const PROJECTS = [
     return (
       <section id="projects" className="py-20">
         <h2 className="text-3xl font-bold mb-12 flex items-center gap-4">
-          <span className="text-cyan-400">01.</span> Featured Projects
+          <span className="text-cyan-400">02.</span> Featured Projects
         </h2>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           {PROJECTS.map((project, i) => (

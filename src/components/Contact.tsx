@@ -6,7 +6,7 @@ const Contact = () => {
           <p className="text-slate-400 mb-10 text-lg">
             Currently looking for new opportunities. My inbox is always open whether you have a question or just want to say hi!
           </p>
-          <a href="chettyokonkwo@gmail.com" 
+          <a href="mailto:chettyokonkwo@gmail.com" 
              className="inline-block px-10 py-4 bg-cyan-500 text-slate-950 font-bold rounded-xl hover:scale-105 transition-transform shadow-lg shadow-cyan-500/20">
             Send an Email
           </a>

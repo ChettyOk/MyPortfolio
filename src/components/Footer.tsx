@@ -5,7 +5,7 @@ const Footer = () => {
     { icon: <Github size={20} />, href: "https://github.com", label: "GitHub" },
     { icon: <Linkedin size={20} />, href: "https://linkedin.com", label: "LinkedIn" },
     { icon: <Twitter size={20} />, href: "https://twitter.com", label: "Twitter" },
-    { icon: <Mail size={20} />, href: "mailto:your@email.com", label: "Email" },
+    { icon: <Mail size={20} />, href: "mailto:chettyokonkwo@gmail.com", label: "Email" },
   ];
 
   return (

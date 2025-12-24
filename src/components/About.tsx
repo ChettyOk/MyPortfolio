@@ -14,7 +14,7 @@ const About = () => {
         {/* Left Side: Bio & Skills */}
         <div className="lg:col-span-7">
           <h2 className="text-3xl font-bold mb-8 flex items-center gap-4">
-            <span className="text-cyan-400 font-mono text-xl">02.</span> About Me
+            <span className="text-cyan-400">01.</span> About Me
           </h2>
           
           <div className="space-y-4 text-slate-400 text-lg leading-relaxed">
