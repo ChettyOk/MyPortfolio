@@ -1,9 +1,6 @@
 @import "tailwindcss";
 
-/* app/globals.css */
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@custom-variant dark (&:where(.dark, .dark *));
 
 :root {
   --blue-accent: 56, 189, 248; /* cyan-400 */
@@ -13,10 +10,17 @@ html {
   scroll-behavior: smooth;
 }
 
-body {
+@layer base {
+  body {
+    /* Perfect Light Mode: Soft White */
+    /* Perfect Dark Mode: Deep Midnight */
+    @apply bg-slate-50 text-slate-900 dark:bg-slate-950 dark:text-slate-50;
+  }
+}
+
+/* body {
   background-color: #ffffff;
   color: #0f172a; /* slate-900 */
-}
 
 /* Subtle Grid Pattern */
 .bg-grid {
