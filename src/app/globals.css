@@ -29,3 +29,9 @@ html {
     linear-gradient(to right, rgba(56, 189, 248, 0.05) 1px, transparent 1px),
     linear-gradient(to bottom, rgba(56, 189, 248, 0.05) 1px, transparent 1px);
 }
+
+.particles-container {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}

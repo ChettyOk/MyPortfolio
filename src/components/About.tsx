@@ -2,9 +2,9 @@ import Image from 'next/image';
 
 const About = () => {
   const skills = {
-    Frontend: ["React", "Next.js", "TypeScript", "Tailwind CSS", "Redux"],
-    Backend: ["Node.js", "Express", "PostgreSQL", "Prisma", "GraphQL"],
-    Tools: ["Git", "Docker", "AWS", "Figma", "Jest"]
+    Frontend: ["React", "JavaScript", "TypeScript", "Tailwind CSS", "HTML & CSS"],
+    Backend: ["Node.js", "Python", "PostgreSQL", "C / C++"],
+    Tools: ["Git / GitHub", "Docker", "Notion", "VS Code", "etc..."]
   };
 
   return (
@@ -19,15 +19,14 @@ const About = () => {
           
           <div className="space-y-6 text-slate-600 dark:text-slate-400 text-lg leading-relaxed">
             <p>
-              Hello! My name is <span className="text-slate-900 dark:text-slate-200 font-bold">Chetachukwu Okonkwo</span> and I enjoy creating things that live on the internet. 
+              Hello! My name is <span className="text-slate-900 dark:text-slate-200 font-bold">Chetachukwu Okonkwo </span> 
+              and I take deep interest in all things technology, more so how it works. 
               My journey in web development started back in 2018 when I decided to build a custom 
-              blog—turns out hacking together a WordPress theme taught me a lot about HTML & CSS!
+              landing page, turns out hacking together a WordPress theme taught me a lot about HTML & CSS!
             </p>
             <p>
-              Fast-forward to today, and I’ve had the privilege of working at an 
-              <span className="text-blue-600 dark:text-cyan-400 font-medium italic"> advertising agency</span>, a 
-              <span className="text-blue-600 dark:text-cyan-400 font-medium italic"> start-up</span>, and a 
-              <span className="text-blue-600 dark:text-cyan-400 font-medium italic"> large corporation</span>. 
+              Since then, I have taken more interest in building projects geared towards aiding daily life and my personal hobby (gaming),
+              with recent interest in cybersecurity.
             </p>
           </div>
 
