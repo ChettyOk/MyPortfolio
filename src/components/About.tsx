@@ -2,9 +2,9 @@ import Image from 'next/image';
 
 const About = () => {
   const skills = {
-    Frontend: ["React", "JavaScript", "TypeScript", "Tailwind CSS", "HTML & CSS"],
+    Frontend: ["React / React native", "JavaScript", "TypeScript", "Tailwind CSS", "HTML & CSS"],
     Backend: ["Node.js", "Python", "PostgreSQL", "C / C++"],
-    Tools: ["Git / GitHub", "Docker", "Notion", "VS Code", "etc..."]
+    Tools: ["Git / GitHub", "Docker", "Notion", "VS Code", "Vercel/Deployment"]
   };
 
   return (

@@ -6,6 +6,12 @@ const PROJECTS = [
     link: "#"
   },
   {
+    title: "Expense Tracker",
+    desc: "Track spending, categories, and budgets with clear monthly insights.",
+    tech: ["React", "TypeScript", "Chart.js"],
+    link: "https://expense-tracker-react-rho-coral.vercel.app?_vercel_share=80TldmaDlcx0ALlEHrDP3N2Mn1LUYMlZ"
+  },
+  {
     title: "E-Commerce App",
     desc: "High-performance store with real-time inventory and search.",
     tech: ["React", "Redux", "Node.js"],
