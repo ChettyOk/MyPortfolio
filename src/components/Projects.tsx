@@ -31,7 +31,7 @@ const PROJECTS: Project[] = [
     ],
     links: {
       repo: "https://github.com/ChettyOk/MR_OptimizedTeamComposer",
-      live: "#"
+      live: "https://mr-optimized-team-composer-web.vercel.app"
     }
   },
   {
