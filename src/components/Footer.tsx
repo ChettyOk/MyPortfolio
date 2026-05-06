@@ -1,15 +1,14 @@
-import { Github, Linkedin, Twitter, Mail, ExternalLink } from 'lucide-react';
+import { Github, Linkedin, Mail } from 'lucide-react';
 
 const Footer = () => {
   const socials = [
     { icon: <Github size={20} />, href: "https://github.com", label: "GitHub" },
     { icon: <Linkedin size={20} />, href: "https://linkedin.com", label: "LinkedIn" },
-    { icon: <Twitter size={20} />, href: "https://twitter.com", label: "Twitter" },
     { icon: <Mail size={20} />, href: "mailto:chettyokonkwo@gmail.com", label: "Email" },
   ];
 
   return (
-    <footer className="mt-20 py-12 border-t border-white/5">
+    <footer className="mt-20 py-12 border-t border-slate-300 dark:border-white/5">
       <div className="max-w-7xl mx-auto px-6 flex flex-col items-center">
         
         {/* Social Icons */}
@@ -20,7 +19,7 @@ const Footer = () => {
               href={social.href} 
               target="_blank" 
               rel="noreferrer"
-              className="text-slate-500 hover:text-cyan-400 hover:-translate-y-1 transition-all duration-300"
+              className="text-slate-600 hover:text-blue-600 dark:hover:text-cyan-400 hover:-translate-y-1 transition-all duration-300"
               aria-label={social.label}
             >
               {social.icon}
@@ -30,14 +29,14 @@ const Footer = () => {
 
         {/* Text Credits */}
         <div className="text-center">
-          <p className="text-slate-500 text-sm font-mono mb-2">
-            Designed & Built by Chetachukwu Okonkwo
+          <p className="text-slate-600 dark:text-slate-500 text-sm font-mono mb-2">
+            Designed and built by Chetachukwu Okonkwo
           </p>
-          <p className="text-slate-600 text-xs flex items-center justify-center gap-2">
-            Built with 
-            <span className="text-cyan-500/50 hover:text-cyan-500 transition-colors cursor-default">Next.js</span> • 
-            <span className="text-cyan-500/50 hover:text-cyan-500 transition-colors cursor-default">Tailwind</span> • 
-            <span className="text-cyan-500/50 hover:text-cyan-500 transition-colors cursor-default">Vercel</span>
+          <p className="text-slate-700 dark:text-slate-600 text-xs flex items-center justify-center gap-2">
+            Built with
+            <span className="text-cyan-500/60 hover:text-cyan-500 transition-colors cursor-default">Next.js</span> •
+            <span className="text-cyan-500/60 hover:text-cyan-500 transition-colors cursor-default">TypeScript</span> •
+            <span className="text-cyan-500/60 hover:text-cyan-500 transition-colors cursor-default">Tailwind</span>
           </p>
         </div>
 

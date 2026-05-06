@@ -10,15 +10,10 @@ import ResumeModal from "@/components/ResumeModal";
 import Footer from "@/components/Footer";
 
 export default function Home() {
-  const [isDarkMode, setIsDarkMode] = useState(false);
+  const [isDarkMode, setIsDarkMode] = useState(
+    () => typeof window !== "undefined" && window.matchMedia("(prefers-color-scheme: dark)").matches
+  );
   const [isResumeOpen, setIsResumeOpen] = useState(false);
-
-  useEffect(() => {
-    // Check system preference on mount
-    if (window.matchMedia("(prefers-color-scheme: dark)").matches) {
-      setIsDarkMode(true);
-    }
-  }, []);
 
   useEffect(() => {
     if (isDarkMode) {
@@ -28,27 +23,24 @@ export default function Home() {
     }
   }, [isDarkMode]);
 
-  // Memoize colors so Particles component doesn't re-init unnecessarily
   const particleColors = useMemo(
-    () => (isDarkMode ? ["#ffffff"] : ["#0f172a"]),
+    () => (isDarkMode ? ["#ffffff"] : ["#94a3b8", "#cbd5e1"]),
     [isDarkMode]
   );
 
   return (
-    // Changed: relative z-0 ensures children can use -z-10 relative to this container
-    <div className="relative min-h-screen bg-white dark:bg-slate-950 text-slate-900 dark:text-white transition-colors duration-300 overflow-x-hidden">
+    <div className="relative min-h-screen bg-slate-50 dark:bg-slate-950 text-slate-900 dark:text-white transition-colors duration-300 overflow-x-hidden">
       
       <div className="fixed inset-0 z-0 pointer-events-none">
         <Particles
           particleColors={particleColors}
-          particleCount={200}
+          particleCount={isDarkMode ? 180 : 90}
           particleSpread={10}
-          speed={0.1}
-          particleBaseSize={100}
+          speed={isDarkMode ? 0.1 : 0.05}
+          particleBaseSize={isDarkMode ? 100 : 70}
           moveParticlesOnHover
-          alphaParticles={false}
+          alphaParticles={!isDarkMode}
           disableRotation={false}
-          // Only access window on client
           pixelRatio={typeof window !== "undefined" ? window.devicePixelRatio : 1}
         />
       </div>
@@ -59,7 +51,7 @@ export default function Home() {
         openResume={() => setIsResumeOpen(true)}
       />
 
-      <main className="relative z-10 max-w-5xl mx-auto px-6 pt-24">
+      <main className="relative z-10 max-w-6xl mx-auto px-6 pt-24">
         <Hero />
         <About />
         <Projects />

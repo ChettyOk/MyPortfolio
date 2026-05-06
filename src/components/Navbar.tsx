@@ -18,11 +18,11 @@ const Navbar = ({ isDarkMode, toggleDarkMode, openResume }: NavProps) => {
   ];
 
   return (
-    <nav className="fixed top-0 w-full z-50 border-b border-slate-200/50 bg-white/80 backdrop-blur-md transition-colors duration-300 dark:border-slate-800/50 dark:bg-slate-950/80 font-sans">
+    <nav className="fixed top-0 w-full z-50 border-b border-slate-300/80 bg-slate-50/95 backdrop-blur-md transition-colors duration-300 dark:border-slate-800/50 dark:bg-slate-950/80 font-sans">
       <div className="max-w-5xl mx-auto px-6 h-20 flex items-center justify-between">
         {/* Logo */}
         <a href="#" className="text-xl font-black tracking-tighter bg-linear-to-r from-blue-600 to-cyan-500 bg-clip-text text-transparent dark:from-blue-400 dark:to-cyan-300">
-          MyPortfolio
+          Cheta.dev
         </a>
 
         {/* Desktop Nav */}
@@ -32,7 +32,7 @@ const Navbar = ({ isDarkMode, toggleDarkMode, openResume }: NavProps) => {
               <a 
                 key={link.name} 
                 href={link.href} 
-                className="text-sm font-bold text-slate-600 hover:text-blue-600 transition-colors dark:text-slate-400 dark:hover:text-blue-400"
+                className="text-sm font-bold text-slate-700 hover:text-blue-600 transition-colors dark:text-slate-400 dark:hover:text-blue-400"
               >
                 {link.name}
               </a>
@@ -42,7 +42,7 @@ const Navbar = ({ isDarkMode, toggleDarkMode, openResume }: NavProps) => {
           <div className="flex items-center gap-4">
             <button 
               onClick={toggleDarkMode} 
-              className="p-2 rounded-xl bg-slate-100 text-slate-600 hover:bg-slate-200 transition-all dark:bg-slate-900 dark:text-yellow-400 dark:hover:bg-slate-800"
+              className="p-2 rounded-xl bg-white text-slate-700 border border-slate-200 hover:bg-slate-100 transition-all dark:bg-slate-900 dark:text-yellow-400 dark:border-slate-800 dark:hover:bg-slate-800"
               aria-label="Toggle Theme"
             >
               {isDarkMode ? <Sun size={20} /> : <Moon size={20} />}
@@ -52,7 +52,7 @@ const Navbar = ({ isDarkMode, toggleDarkMode, openResume }: NavProps) => {
               onClick={openResume}
               className="px-5 py-2 bg-blue-600 text-white text-xs font-black rounded-xl shadow-lg shadow-blue-600/20 hover:bg-blue-700 transition-all active:scale-95 uppercase tracking-widest"
             >
-              Resume
+              View Resume
             </button>
           </div>
         </div>
@@ -61,7 +61,7 @@ const Navbar = ({ isDarkMode, toggleDarkMode, openResume }: NavProps) => {
         <div className="flex md:hidden items-center gap-4">
             <button 
               onClick={toggleDarkMode} 
-              className="p-2 rounded-xl bg-slate-100 text-slate-600 dark:bg-slate-900 dark:text-yellow-400"
+              className="p-2 rounded-xl bg-white text-slate-700 border border-slate-200 dark:bg-slate-900 dark:text-yellow-400 dark:border-slate-800"
             >
               {isDarkMode ? <Sun size={20} /> : <Moon size={20} />}
             </button>
@@ -76,7 +76,7 @@ const Navbar = ({ isDarkMode, toggleDarkMode, openResume }: NavProps) => {
 
       {/* Mobile Menu */}
       {isOpen && (
-        <div className="md:hidden absolute top-20 left-0 w-full bg-white dark:bg-slate-950 border-b border-slate-200 dark:border-slate-800 p-6 flex flex-col gap-6 animate-in slide-in-from-top duration-300">
+        <div className="md:hidden absolute top-20 left-0 w-full bg-slate-50 dark:bg-slate-950 border-b border-slate-300 dark:border-slate-800 p-6 flex flex-col gap-6 animate-in slide-in-from-top duration-300">
           {navLinks.map((link) => (
             <a 
               key={link.name} 
